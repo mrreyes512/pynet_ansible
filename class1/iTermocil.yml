@@ -1,0 +1,13 @@
+windows:
+  - name: pyLab
+    root: ~/owncloud/Education/pyNet/git/class1
+    layout: main-vertical
+    panes:
+      - name: VIM window
+        commands:
+          - vim -c NERDTree
+      - name: Python Shell
+        commands:
+          - iterm2_profile Flat
+          - python
+      - name: Execution Window
