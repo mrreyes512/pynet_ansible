@@ -2,8 +2,9 @@
 
 
 Kirk Byers, he's the man. Check out his courses:
-[Python for Network Engineers](https://pynet.twb-tech.com/)
+rPython for Network Engineers](https://pynet.twb-tech.com/)
 
+~~~
 #PyNet
 Host pylab
  Hostname pylab9a.twb-tech.com
@@ -12,3 +13,4 @@ Host pylab
 Host pylab-telnet
  Hostname 184.105.247.70
  User 
+~~~
