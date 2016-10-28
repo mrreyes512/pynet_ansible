@@ -1,6 +1,6 @@
 windows:
   - name: pyLab class2
-    root: ~/owncloud/Education/pyNet/git/class2
+    root: ~/pyNet/git/class2
     layout: main-vertical
     panes:
       - name: VIM window
@@ -11,3 +11,5 @@ windows:
           - iterm2_profile Flat
           - python
       - name: Execution Window
+        commands:
+          - ls -FtrlhAG
