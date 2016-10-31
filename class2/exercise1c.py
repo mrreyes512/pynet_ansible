@@ -6,3 +6,9 @@ Write a simple Python module that contains one function that prints 'hello' (mod
         * my_func.py is located in ~/applied_python/lib/python2.7/site-packages/
 """
 
+from my_func import print_hello
+
+
+#import my_func
+
+print_hello()
