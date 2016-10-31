@@ -7,7 +7,7 @@ rPython for Network Engineers](https://pynet.twb-tech.com/)
 ~~~
 #PyNet
 Host pylab
- Hostname pylab9a.twb-tech.com
+ Hostname ***
  User mreyes
 
 Host pylab-telnet
