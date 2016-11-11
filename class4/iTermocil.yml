@@ -12,4 +12,5 @@ windows:
           - python
       - name: Execution Window
         commands:
-          - ls -FtrlhAG
+          #- ls -FtrlhAG
+          - tree
