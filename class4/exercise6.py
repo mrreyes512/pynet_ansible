@@ -31,10 +31,9 @@ srx = {
     'port': 22,
     }
 
-dev_list = [ 'pynet1', 'srx' ]
-
-for device in (pynet1, pynet2):
-    print device
-    ssh = ConnectHandler('**device')
-    # output = ssh.find_prompt()
-    # print output
+for device in (pynet1, pynet2, srx):
+    ssh = ConnectHandler(**device)
+    arp_table = ssh.send_command("show arp")
+    print '-' * 80
+    print device['ip'] + ' - ' + device['device_type'] +  ' - arp table output'
+    print arp_table
