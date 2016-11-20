@@ -1,0 +1,9 @@
+---
+# 3. In the above access_switch.j2 template use a Jinja2 for loop to create all
+# of the interfaces from FastEthernet 0/1 to FastEthernet 0/24.  Each of the
+# interfaces should have the following configuration:
+
+- name: Generate configuration file
+  hosts: localhost
+  roles:
+    - switch
