@@ -1,0 +1,2 @@
+logging buffered 4092
+no logging console

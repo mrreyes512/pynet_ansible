@@ -1,1 +1,4 @@
 *.pyc
+.tmuxinator.yml
+*.retry
+iTermocil.yml

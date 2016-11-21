@@ -1,0 +1,16 @@
+windows:
+  - name: pyLab class2
+    root: ~/pyNet/git/class5
+    layout: main-vertical
+    panes:
+      - name: VIM window
+        commands:
+          - vim -c NERDTree
+      - name: Python Shell
+        commands:
+          - iterm2_profile Flat
+          - python
+      - name: Execution Window
+        commands:
+          #- ls -FtrlhAG
+          - tree

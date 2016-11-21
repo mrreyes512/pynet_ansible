@@ -1,0 +1,5 @@
+---
+- name: Generate configuration file
+  template: src=my_template.j2
+            dest=/Volumes/home/mrreyes512/pyNet/git/class5/CONFIGS/{{item.hostname}}.txt
+  with_items: "{{ devices }}"

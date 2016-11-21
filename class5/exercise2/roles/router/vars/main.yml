@@ -1,0 +1,7 @@
+---
+devices:
+  - {hostname: pynet-rtr1, ip_addr: 1.1.1.1, gateway: 1.1.1.255, SNMP: TRUE }
+  - {hostname: pynet-rtr2, ip_addr: 1.1.1.2, gateway: 1.1.1.255, SNMP: TRUE }
+  - {hostname: pynet-rtr3, ip_addr: 1.1.1.3, gateway: 1.1.1.255, SNMP: FALSE }
+  - {hostname: pynet-rtr4, ip_addr: 1.1.1.4, gateway: 1.1.1.255, SNMP: TRUE }
+  - {hostname: pynet-rtr5, ip_addr: 1.1.1.5, gateway: 1.1.1.255, SNMP: FALSE }

@@ -1,0 +1,9 @@
+---
+# 2. Expand upon the above template by adding a Jinja2 if conditional.  The if conditional
+# should add the below SNMPv3 commands and associated ACL (i.e. if SNMPv3, then the below
+# commands are added into the configuration file):
+
+- name: Generate configuration file
+  template: src=my_template.j2
+            dest=/Volumes/home/mrreyes512/pyNet/git/class5/CONFIGS/{{item.hostname}}.txt
+  with_items: "{{ devices }}"
