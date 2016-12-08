@@ -1,0 +1,33 @@
+#!/usr/bin/env ansible-playbook
+---
+#==============================================================================
+#title          :exercise1 - week6
+#description    :Using Ansible, configure three VLANs on the Arista switch
+#                specifying both the VLAN IDs and the VLAN names.  For the VLAN
+#                IDs randomly pick three numbers between 100 and 999.
+#author         :Mark Reyes
+#date           :Dec 2016
+#==============================================================================
+
+- name: Exercise1 - VLAN adds
+  hosts: arista
+
+#--------------------------------------
+# Define Tasks
+
+  tasks:
+    - name: VLAN adding
+      eos_vlan: name={{ item.vlan_name }} vlanid={{ item.vlan_id }}
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+#--------------------------------------
+# Define Items
+
+      with_items:
+        - {vlan_name: RED, vlan_id: 130}
+        - {vlan_name: GREEN, vlan_id: 180}
+        - {vlan_name: WHITE, vlan_id: 255}
