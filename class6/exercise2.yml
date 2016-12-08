@@ -1,0 +1,55 @@
+#!/usr/bin/env ansible-playbook
+---
+#==============================================================================
+#title          :exercise2 - week6
+#description    :Use Ansible to configure your 'primary  interface' as follows:
+#
+# interface description:     *** IN USE ***
+# switchport mode:          access
+# VLAN:                           <one of the VLANs created in exercise1>
+#
+# Your 'primary Ethernet interface' is specified in your ~/ansible-hosts file.
+#
+# If your primary interface is already 'IN USE' (by someone else), then use
+# your secondary interface (once again specified in ~/ansible-hosts).  You can
+# determine if an interface is already in use by SSH'ing into the switch.
+# Reminder, do NOT use Ethernet1.
+#
+# pynet-sw4
+# eapi_username=eapi
+# eapi_password=17mendel
+# eapi_hostname=184.105.247.75
+# eapi_port=443
+# primary interface == Ethernet2
+#
+#author         :Mark Reyes
+#date           :Dec 2016
+#==============================================================================
+
+- name: Exercise2 - Interface configure
+  hosts: arista
+
+#--------------------------------------
+# Define Tasks
+
+  tasks:
+    - name: Changing that description
+      eos_interface: name=Ethernet2
+            description="*** IN USE ***"
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+    - name: Setting that access mode
+      eos_switchport: name=Ethernet2
+            mode=access
+            access_vlan=130
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+

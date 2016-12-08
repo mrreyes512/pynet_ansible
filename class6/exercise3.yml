@@ -1,0 +1,40 @@
+#!/usr/bin/env ansible-playbook
+---
+#==============================================================================
+#title          :exercise3 - week6
+#description    :Use Ansible to configure your 'primary  interface' as follows:
+#
+# switchport mode:           trunk
+# trunk native VLAN:        VLAN1
+# trunk allowed VLANs:    <the three VLANs created in exercise1>
+#
+# pynet-sw4
+# eapi_username=eapi
+# eapi_password=17mendel
+# eapi_hostname=184.105.247.75
+# eapi_port=443
+# primary interface == Ethernet2
+#
+#author         :Mark Reyes
+#date           :Dec 2016
+#==============================================================================
+
+- name: Exercise3 - Trunk Interface configure
+  hosts: arista
+
+#--------------------------------------
+# Define Tasks
+
+  tasks:
+    - name: Setting that trunk mode
+      eos_switchport: name=Ethernet2
+            mode=trunk
+            trunk_native_vlan=1
+            trunk_allowed_vlans=120,130,255
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+
