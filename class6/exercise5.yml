@@ -1,0 +1,38 @@
+#!/usr/bin/env ansible-playbook
+---
+#==============================================================================
+#title          :exercise5 - week6
+#
+# Use the cisco_file_transfer.py module to transfer a small file to the Cisco
+# pynet-rtr1 router
+#
+# pynet-sw4
+# eapi_username=eapi
+# eapi_password=17mendel
+# eapi_hostname=184.105.247.75
+# eapi_port=443
+# primary interface == Ethernet2
+#
+#author         :Mark Reyes
+#date           :Dec 2016
+#==============================================================================
+
+- name: Exercise5 - Cisco_File_Transfer
+  hosts: pynet-rtr1
+  gather_facts: false
+
+#--------------------------------------
+# Define Tasks
+
+  tasks:
+  - name: Transfer that file
+    cisco_file_transfer:
+      source_file="/home/mreyes/git/pynet_ansible/class6/banner.txt"
+      dest_file=banner.txt
+      overwrite=true
+      enable_scp=true
+      host={{ host }}
+      port={{ port }}
+      username={{ username }}
+      password={{ password }}
+

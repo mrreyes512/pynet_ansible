@@ -1,0 +1,8 @@
+   ----------------------------------------------------------------------
+   |       WARNING - PRIVATE NETWORK DEVICE - ACCESS PROHIBITED         |
+   |                                                                    |
+   |  This device is a private network device. Any UNAUTHORIZED ACCESS  |
+   |  to this device is ILLEGAL and will be logged so that appropriate  |
+   |  legal action can be taken!                                        |
+   |                                                                    |
+   ----------------------------------------------------------------------
