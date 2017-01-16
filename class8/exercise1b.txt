@@ -1,0 +1,27 @@
+>>> arista_creds = creds[1]
+>>> std_creds = creds[0]
+>>>
+>>> arista_creds
+<Credentials: admin1>
+>>> std_creds
+<Credentials: pyclass>
+>>>
+>>>
+>>> for i in net_devices:
+...     if 'arista_eos' in i.device_type:
+...         i.credentials = arista_creds
+...     else:
+...         i.credentials = std_creds
+...     i.save()
+...
+>>> for i in net_devices:
+...     print i, i.device_type, i.credentials
+...
+pynet-rtr1 cisco_ios pyclass
+pynet-rtr2 cisco_ios pyclass
+pynet-sw1 arista_eos admin1
+pynet-sw2 arista_eos admin1
+pynet-sw3 arista_eos admin1
+pynet-sw4 arista_eos admin1
+juniper-srx juniper pyclass
+>>>
