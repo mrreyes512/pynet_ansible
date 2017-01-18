@@ -1,0 +1,34 @@
+>>> for i in net_devices:
+...     print i, i.device_type, i.vendor
+...
+pynet-rtr1 cisco_ios None
+pynet-rtr2 cisco_ios None
+pynet-sw1 arista_eos None
+pynet-sw2 arista_eos None
+pynet-sw3 arista_eos None
+pynet-sw4 arista_eos None
+juniper-srx juniper None
+>>>
+>>>
+>>> for i in net_devices:
+...     if 'arista_eos' in i.device_type:
+...         i.vendor = "Arista"
+...     elif 'cisco' in i.device_type:
+...         i.vendor = "Cisco"
+...     elif 'juniper' in i.device_type:
+...         i.vendor = "Juniper"
+...     else:
+...         i.vendor = "Donno"
+...     i.save()
+...
+>>> for i in net_devices:
+...      print i, i.device_type, i.vendor
+...
+pynet-rtr1 cisco_ios Cisco
+pynet-rtr2 cisco_ios Cisco
+pynet-sw1 arista_eos Arista
+pynet-sw2 arista_eos Arista
+pynet-sw3 arista_eos Arista
+pynet-sw4 arista_eos Arista
+juniper-srx juniper Juniper
+>>>
