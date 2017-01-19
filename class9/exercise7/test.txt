@@ -1,0 +1,47 @@
+7. Modify your PYTHONPATH such that the directory containing ./mytest is now on your PYTHONPATH. Verify this in sys.path.
+
+--------------------------------------------
+
+ 00:46:32  ~/pyNet/git                                                                                          class9 ?  workbookPro
+mrreyes512 ❯ export PYTHONPATH=~/pyNet/git/class9/exercise7
+
+ 00:46:36  ~/pyNet/git                                                                                          class9 ?  workbookPro
+mrreyes512 ❯ python
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>>
+>>> import sys
+>>>
+>>> print sys.path
+['', '/Volumes/home/mrreyes512/pyNet/git/class9/exercise7', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old', '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload', '/usr/local/lib/python2.7/site-packages', '/Library/Python/2.7/site-packages']
+>>>
+>>> from pprint import pprint
+>>>
+>>> pprint (sys.path)
+['',
+ '/Volumes/home/mrreyes512/pyNet/git/class9/exercise7',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python27.zip',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old',
+ '/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload',
+ '/usr/local/lib/python2.7/site-packages',
+ '/Library/Python/2.7/site-packages']
+>>>
+>>>
+>>> import mytest
+>>>
+>>> mytest.func1()
+This is simple
+>>>
+>>> mytest.__file__
+'/Volumes/home/mrreyes512/pyNet/git/class9/exercise7/mytest/__init__.py'
+>>>
+>>> exit()
+

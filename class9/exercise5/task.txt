@@ -1,0 +1,2 @@
+5. Write a child class MyChildClass of MyClass. This child class should override the 'hello' method and print a different statement.
+

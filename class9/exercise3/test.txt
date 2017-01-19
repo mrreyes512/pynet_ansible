@@ -1,0 +1,23 @@
+3. Add a __all__ variable to your __init__.py file.
+
+Test out __all__ using 'from mytest import *'. Verify that you can directly execute func1(), func2(), func3(). Once again do this from the directory containing ./mytest.
+
+------------------------------------------------
+ 23:35:49  ~/pyNet/git/class9/exercise3    class9 ?  workbookPro
+mrreyes512 ❯ python
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>> from mytest import *
+>>>
+>>> func1()
+This is simple
+>>> func2()
+Hello Worldy World!
+>>> func3()
+This is whatever
+>>>
+>>>
+>>> exit()
+

@@ -1,0 +1,54 @@
+2. Make mytest a package.
+
+    a. In the __init__.py file import each of the functions in world.py, simple.py, whatever.py.
+    b. Test out your package from the Python interpreter shell. Make sure you can invoke your three functions using both 'import mytest' and 'from mytest import func1, func2, func3'. Once again do this from the directory containing ./mytest.
+
+
+--------------------------------------------
+ 23:26:12  ~/pyNet/git/class9/exercise2    class9 ?  workbookPro
+mrreyes512 ❯ python
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>>
+>>> mytest.func1
+<function func1 at 0x10d7a0320>
+>>> mytest.func1()
+This is simple
+>>> mytest.func2()
+Hello Worldy World!
+>>> mytest.func3()
+This is whatever
+>>>
+
+
+
+ 23:27:42  ~/pyNet/git/class9/exercise2    class9 ?  workbookPro
+mrreyes512 ❯ python
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>> from mytest import simple, whatever, world
+>>>
+>>> mytest.func1()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'mytest' is not defined
+>>>
+>>> from mytest import func1, func2, func3
+>>>
+>>> mytest.func1()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'mytest' is not defined
+>>>
+>>> func1()
+This is simple
+>>> func2()
+Hello Worldy World!
+>>> func3()
+This is whatever
+

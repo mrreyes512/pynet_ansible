@@ -1,0 +1,2 @@
+8. Update the __init__.py file and the __all__ variable to include MyClass.
+

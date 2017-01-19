@@ -1,0 +1,20 @@
+1. Create a directory called mytest. In ./mytest create three Python modules world.py, simple.py, whatever.py.
+
+     a. These three files should each have a function that prints a statement when called (func1, func2, func3).
+     b. In each of the three modules use the __name__ technique to separate executable code from importable code. Each module should contain executable code.
+     c. Verify that you are NOT able to import ./mytest (try this from the directory that contains ./mytest).
+
+
+----------------------------------------------
+Python 2.7.12 (default, Oct 11 2016, 05:24:00)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> import mytest.simple
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.simple
+
